@@ -7970,6 +7970,10 @@
   display: flex;
 }
 
+span {
+  font-weight: 600;
+}
+
 img {
   border-radius: 20%;
 }
@@ -7981,8 +7985,9 @@ img {
 }
 
 header {
+  opacity: .8;
   min-height: 350px;
-  background: radial-gradient(circle, #22c1c3 0%, #fdbb2d 100%);
+  background: linear-gradient(135deg, #ffe18955 25%, #0000 25%) -10px 0 / 20px 20px, linear-gradient(225deg, #ffe189 25%, #0000 25%) -10px 0 / 20px 20px, linear-gradient(315deg, #ffe18955 25%, #0000 25%) 0 0 / 20px 20px, linear-gradient(45deg, #ffe189 25%, #91dcfa 25%) 0 0 / 20px 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -7996,11 +8001,12 @@ header span {
 
 .redes {
   align-self: center;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
-.redes img {
-  height: 30px;
+.redes a {
+  color: #000;
+  min-height: 50px;
 }
 
 .info {
@@ -8050,7 +8056,7 @@ header span {
 
 .squares-grid .square ul img {
   height: auto;
-  width: 95px;
+  width: 75px;
 }
 
 .squares-grid .square ul li {
@@ -8090,8 +8096,15 @@ footer {
 
 @media only screen and (max-width: 1050px) {
   .squares-grid {
-    grid-template-rows: repeat(4, 500px);
-    grid-template-columns: repeat(1, 500px);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .squares-grid .square {
+    min-width: 200px;
+    min-height: 400px;
+    border-radius: 25px;
+    padding: 20px;
   }
 }
 

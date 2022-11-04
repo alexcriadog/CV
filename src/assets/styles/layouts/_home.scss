@@ -15,6 +15,10 @@
   flex-direction: column;
 }
 
+span {
+  font-weight: 600;
+}
+
 img {
   border-radius: 20%;
 }
@@ -26,8 +30,9 @@ img {
 }
 
 header {
-  background: rgb(34, 193, 195);
-  background: radial-gradient(circle, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  background-color: #91dcfa;
+  opacity: 0.8;
+  background: linear-gradient(135deg, #ffe18955 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #ffe189 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #ffe18955 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #ffe189 25%, #91dcfa 25%) 0px 0/ 20px 20px;
   min-height: 350px;
   display: flex;
   flex-direction: column;
@@ -41,11 +46,12 @@ header {
 }
 
 .redes {
-  margin: 20px 0;
+  margin-top: 20px;
   align-self: center;
 
-  img {
-    height: 30px;
+  a {
+    color: black;
+    min-height: 50px;
   }
 }
 
@@ -95,7 +101,7 @@ header {
 
       img {
         height: auto;
-        width: 95px;
+        width: 75px;
       }
 
       li {
@@ -139,7 +145,14 @@ footer {
 
 @media only screen and (max-width: 1050px) {
   .squares-grid {
-    grid-template-rows: repeat(4, 500px);
-    grid-template-columns: repeat(1, 500px);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+
+    .square {
+      border-radius: 25px;
+      padding: 20px;
+      min-width: 200px;
+      min-height: 400px;
+    }
   }
 }
